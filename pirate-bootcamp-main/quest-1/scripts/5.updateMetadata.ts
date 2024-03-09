@@ -45,11 +45,11 @@ import {
   // define the new token config settings
   const tokenConfig = {
     // new name
-    name: "New Super Sweet Token",
+    name: "New Super Sweet BEN Token",
     // new symbol
-    symbol: "nSST",
+    symbol: "BEN",
     // new uri
-    uri: "https://thisisnot.arealurl/new.json",
+    uri: "https://gateway.lighthouse.storage/ipfs/QmVeZh3s72YLHSrXNsxvfdjSd1oQ5dc3wts1y8DcAw5DZn/935_customurijson",
   };
 
   /**

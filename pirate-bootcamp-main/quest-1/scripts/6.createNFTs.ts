@@ -24,11 +24,11 @@ import { Metaplex, bundlrStorage, keypairIdentity } from "@metaplex-foundation/j
   if (!localKeys?.tokenMint)
     return console.warn("No local keys were found. Please run '3.createTokenWithMetadata.ts'");
 
-  const tokenMint: PublicKey = localKeys.tokenMint;
+  // const tokenMint: PublicKey = localKeys.tokenMint;
 
-  console.log("==== Local PublicKeys loaded ====");
-  console.log("Token's mint address:", tokenMint.toBase58());
-  console.log(explorerURL({ address: tokenMint.toBase58() }));
+  // console.log("==== Local PublicKeys loaded ====");
+  // console.log("Token's mint address:", tokenMint.toBase58());
+  // console.log(explorerURL({ address: tokenMint.toBase58() }));
 
   //////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////
@@ -38,15 +38,16 @@ import { Metaplex, bundlrStorage, keypairIdentity } from "@metaplex-foundation/j
    * checkout: https://nft.storage/ to help store images
    */
   const metadata = {
-    name: "The Gradient Pearl",
+    name: "The Captain's Ship",
     symbol: "SHIP",
     description:
       "The Gradient Pearl is a legendary Pirate ship that sails the Seven Seas. Captain Rajovenko leads with a drink can in his hand. ",
     image:
-      "https://bafybeic75qqhfytc6xxoze2lo5af2lfhmo2kh4mhirelni2wota633dgqu.ipfs.nftstorage.link/",
+      "https://bafybeihww4tue5pme3h2udqvkpfbzs5zf4h2pysuoowwofbbk372vvtmja.ipfs.nftstorage.link/",
+    isCollection: true,
   };
   // another ship: "https://bafybeiblld2wlxyivlivnhaqbcixhzxrodjzrycjkitz3kdmzj65gebwxe.ipfs.nftstorage.link/"
-  // Captain Rajovenko: "https://bafybeihww4tue5pme3h2udqvkpfbzs5zf4h2pysuoowwofbbk372vvtmja.ipfs.nftstorage.link/"
+  // Captain Rajovenko: ""
 
   /**
    * Use the Metaplex sdk to handle most NFT actions
@@ -94,8 +95,6 @@ import { Metaplex, bundlrStorage, keypairIdentity } from "@metaplex-foundation/j
   printConsoleSeparator("NFT created:");
   console.log(explorerURL({ txSignature: response.signature }));
 
-  return;
-
   /**
    *
    */
@@ -103,8 +102,9 @@ import { Metaplex, bundlrStorage, keypairIdentity } from "@metaplex-foundation/j
   printConsoleSeparator("Find by mint:");
 
   // you can also use the metaplex sdk to retrieve info about the NFT's mint
-  const mintInfo = await metaplex.nfts().findByMint({
-    mintAddress: tokenMint,
-  });
-  console.log(mintInfo);
+  // const mintInfo = await metaplex.nfts().findByMint({
+  //   mintAddress: tokenMint,
+  // });
+  // console.log(mintInfo);
+  return;
 })();

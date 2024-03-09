@@ -45,7 +45,7 @@ import {
     //
     symbol: "GOLD",
     //
-    uri: "https://thisisnot.arealurl/info.json",
+    uri: "https://bafybeihkc3tu4ugc5camayoqw7tl2lahtzgm2kpiwps3itvfsv7zcmceji.ipfs.nftstorage.link/",
   };
 
   // image url: https://bafybeihkc3tu4ugc5camayoqw7tl2lahtzgm2kpiwps3itvfsv7zcmceji.ipfs.nftstorage.link/
